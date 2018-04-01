@@ -10,7 +10,7 @@ class Flavor{
 		double retail;
 		int stock;
 	public:
-		Fuse(string name, string description, double wholesale, double retail, int stock){
+		Flavor(string name, string description, double wholesale, double retail, int stock){
 			this->name = name;
 			this->description = description;
 			this->wholesale = wholesale;
@@ -22,4 +22,6 @@ class Flavor{
 	
 	//this will add the flavor to a vector and store it for later use
 	void addtoVector(Flavor flavorToAdd, vector<Flavor> flavors);
+	
+	void printFlavors(vector<Flavor> flavors);
 };
