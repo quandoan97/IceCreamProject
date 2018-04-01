@@ -1,22 +1,24 @@
 #include <iostream>
 
-using namespace std;
+using namespace std; 
 
-class Flavor{
+class Container{
 	private:
 		string name;
 		string description;
 		double wholesale;
 		double retail;
 		int stock;
+		int scoops;
 	public:
-		Flavor(string name, string description, double wholesale, double retail, int stock){
+		Container(string name, string description, double wholesale, double retail, int stock, int scoops){
 			this->name = name;
 			this->description = description;
 			this->wholesale = wholesale;
 			this->retail = retail;
 			this->stock = stock;
+			this->scoops = scoops;
 		}
 	
-	friend ostream& operator<<(ostream& out, const Flavor& f);
+	friend ostream& operator<<(ostream& out, const Container& c);
 };

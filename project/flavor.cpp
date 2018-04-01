@@ -1,11 +1,11 @@
 #include "flavor.h"
-using namespace std;
-void addtoVector(Flavor flavorToAdd, vector<Flavor> flavors){
-	flavors.push_back(flavorToAdd);
-}
 
-void printFlavors(vector<Flavor> flavors){
-	for(unsigned int i = 0; i < flavors.size(); i++){
-		cout << flavors[i] << " ";
-	}
+ostream& operator<<(ostream& out, const Flavor& f){
+	out << "Name: " << f.name 
+		<< "\nDescription: " << f.description 
+		<< "\nWholesale Price: " << f.wholesale 
+		<< "\nRetail Prince: " << f.retail
+		<< "\nStock: " << f.stock 
+		<< endl;
+	return out;
 }
