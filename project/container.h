@@ -1,4 +1,6 @@
 #include <iostream>
+#ifndef CONTAINER_H
+#define CONTAINER_H
 
 using namespace std; 
 
@@ -22,3 +24,4 @@ class Container{
 	
 	friend ostream& operator<<(ostream& out, const Container& c);
 };
+#endif

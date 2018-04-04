@@ -1,5 +1,6 @@
 #include <iostream>
-
+#ifndef FLAVOR_H
+#define FLAVOR_H
 using namespace std;
 
 class Flavor{
@@ -20,3 +21,4 @@ class Flavor{
 	
 	friend ostream& operator<<(ostream& out, const Flavor& f);
 };
+#endif

@@ -1,5 +1,6 @@
 #include <iostream>
-
+#ifndef TOPPINGS_H
+#define TOPPINGS_H
 using namespace std; 
 
 class Toppings{
@@ -24,3 +25,4 @@ class Toppings{
 	
 	friend ostream& operator<<(ostream& out, const Toppings& c);
 };
+#endif
