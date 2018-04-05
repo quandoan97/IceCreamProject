@@ -19,6 +19,12 @@ class Flavor{
 			this->stock = stock;
 		}
 	
+	string returnName();
+	string returnDescription();
+	double returnWholesale();
+	double returnRetail();
+	int returnStock();
+	
 	friend ostream& operator<<(ostream& out, const Flavor& f);
 };
 #endif

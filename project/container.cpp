@@ -10,3 +10,28 @@ ostream& operator<<(ostream& out, const Container& c){
 		<< endl;
 	return out;
 }
+
+//These will return the values entered by the user
+string Container::returnName(){
+	return name;
+}
+
+string Container::returnDescription(){
+	return description;
+}
+
+double Container::returnWholesale(){
+	return wholesale;	
+}
+
+double Container::returnRetail(){
+	return retail;
+}
+
+int Container::returnStock(){
+	return stock;
+}
+
+int Container::returnScoops(){
+	return scoops;
+}
