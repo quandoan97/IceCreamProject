@@ -20,8 +20,16 @@ class Toppings{
 			this->stock = stock;
 			this->topping_select = select_to_string(topping_select);
 		}
-	
+	//This gives us the 4 differetn types of toppings
 	string select_to_string(int selection);
+	
+	//These will return the values eneterd in by the user
+	string returnName();
+	string returnDescription();
+	double returnWholesale();
+	double returnRetail();
+	int returnStock();
+	string returnTopping();
 	
 	friend ostream& operator<<(ostream& out, const Toppings& c);
 };

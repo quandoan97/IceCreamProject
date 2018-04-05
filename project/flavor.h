@@ -19,6 +19,7 @@ class Flavor{
 			this->stock = stock;
 		}
 	
+	//These will return the values eneterd in by the user
 	string returnName();
 	string returnDescription();
 	double returnWholesale();

@@ -25,3 +25,28 @@ string Toppings::select_to_string(int selection){
 		return "Not a valid choice";
 	}
 }
+
+//These will return the values entered by the user
+string Toppings::returnName(){
+	return name;
+}
+
+string Toppings::returnDescription(){
+	return description;
+}
+
+double Toppings::returnWholesale(){
+	return wholesale;	
+}
+
+double Toppings::returnRetail(){
+	return retail;
+}
+
+int Toppings::returnStock(){
+	return stock;
+}
+
+string Toppings::returnTopping(){
+	return topping_select;
+}
