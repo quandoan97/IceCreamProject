@@ -3,6 +3,8 @@
 #include "flavor.h"
 #include "container.h"
 #include "toppings.h"
+#ifndef STORE_H
+#define STORE_H
 
 class Store{
 	private:
@@ -10,9 +12,15 @@ class Store{
 		vector<Container> totalContainers;
 		vector<Toppings> totalToppings;
 	public:
-		void pushbackFlavors(Flavor& item);		//Adds to flavors vector
-		void pushbackToppings(Toppings& item);	//Adds to toppings vector
-		void pushbackContainers(Container& item);	//Adds to Containers vector
+		//Create a Flavor, Container, or Topping
+		void createFlavor();
+		void createTopping();
+		void createContainer();
+	
+		//Add the items to there respected vectors
+		void pushbackFlavors(Flavor& item);
+		void pushbackToppings(Toppings& item);
+		void pushbackContainers(Container& item);
 	
 		//These will print out all of the Flavors, Containers, and Toppings
 		void printFlavors();
@@ -24,3 +32,4 @@ class Store{
 		Toppings returnTopping(int index);
 		Container returnContainer(int index);
 };
+#endif

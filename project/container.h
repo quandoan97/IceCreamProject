@@ -22,14 +22,14 @@ class Container{
 			this->scoops = scoops;
 		}
 	
-	//These will return the values eneterd in by the user
-	string returnName();
-	string returnDescription();
-	double returnWholesale();
-	double returnRetail();
-	int returnStock();
-	int returnScoops();
+		//These will return the values eneterd in by the user
+		string returnName();
+		string returnDescription();
+		double returnWholesale();
+		double returnRetail();
+		int returnStock();
+		int returnScoops();
 	
-	friend ostream& operator<<(ostream& out, const Container& c);
+		friend ostream& operator<<(ostream& out, const Container& c);
 };
 #endif

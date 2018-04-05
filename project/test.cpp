@@ -7,7 +7,27 @@ using namespace std;
 int main(){
 	Store myStore;
 	
-	Flavor vanilla("Vanilla", "Creamy vanilla flavored Ice cream", .50, 1.50, 10);
+	int selection;
+	
+	cout << "Welcome to the Ice Cream Shop\n"
+		 << "What would you like to do:\n" 
+		 << "1. Add Flavor\n"
+		 << "2. Add Container\n"
+		 << "3. Add Topping\n"
+		 << endl;
+	cin >> selection;
+	
+	if(selection == 1){
+		myStore.createFlavor();
+	}else if(selection == 2){
+		myStore.createContainer();
+	}else{
+		myStore.createTopping();
+	}
+	
+	myStore.printContainers();
+	
+	/*Flavor vanilla("Vanilla", "Creamy vanilla flavored Ice cream", .50, 1.50, 10);
 	Flavor chocolate("Chocolate", "Creamy chocolatey flavor", .75, 2.00, 12);
 	Flavor cookies("Cookies and Cream", "An oreo based cookie and cream Ice cream", 1.00, 3.00, 15);
 	
@@ -27,6 +47,7 @@ int main(){
 	
 	
 	
-	//cout <<"\n"<<candy.returnTopping()<<" We own" <<endl;
+	cout <<"\n"<<candy.returnTopping()<<" We own" <<endl;
+	*/
 	return 0;
 }
