@@ -26,10 +26,14 @@ class Store{
 		void printFlavors();
 		void printContainers();
 		void printToppings();
+		void printAll();
 	
 		//These will return a specific flavor
 		Flavor returnFlavor(int index);
 		Toppings returnTopping(int index);
 		Container returnContainer(int index);
+	
+		//This willl create flavors, containers, and toppings
+		void easter_egg();
 };
 #endif

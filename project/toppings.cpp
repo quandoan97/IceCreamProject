@@ -7,7 +7,6 @@ ostream& operator<<(ostream& out, const Toppings& t){
 		<< "\nWholesale Price: " << t.wholesale 
 		<< "\nRetail Prince: " << t.retail
 		<< "\nStock: " << t.stock 
-		<< "\nRequested Topping Amount: " << t.topping_select
 		<< endl;
 	return out;
 }

@@ -12,13 +12,13 @@ class Toppings{
 		int stock;
 		string topping_select; // 1. Light, 2. Normal, 3. Extra, 4. Drenched
 	public:
-		Toppings(string name, string description, double wholesale, double retail, int stock, int topping_select){
+		Toppings(string name, string description, double wholesale, double retail, int stock/*, int topping_select*/){
 			this->name = name;
 			this->description = description;
 			this->wholesale = wholesale;
 			this->retail = retail;
 			this->stock = stock;
-			this->topping_select = select_to_string(topping_select);
+			/*this->topping_select = select_to_string(topping_select);*/
 		}
 		//This gives us the 4 differetn types of toppings
 		string select_to_string(int selection);

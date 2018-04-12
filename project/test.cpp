@@ -8,24 +8,32 @@ int main(){
 	Store myStore;
 	
 	int selection;
-	
-	cout << "Welcome to the Ice Cream Shop\n"
-		 << "What would you like to do:\n" 
-		 << "1. Add Flavor\n"
-		 << "2. Add Container\n"
-		 << "3. Add Topping\n"
-		 << endl;
-	cin >> selection;
-	
-	if(selection == 1){
-		myStore.createFlavor();
-	}else if(selection == 2){
-		myStore.createContainer();
-	}else{
-		myStore.createTopping();
+
+	while(true){
+		cout << "Welcome to the Ice Cream Shop\n"
+			 << "What would you like to do:\n" 
+			 << "1. Add Flavor\n"
+			 << "2. Add Container\n"
+			 << "3. Add Topping\n"
+			 << "4. Print all Flavors, Containers, & Toppings"
+			 << "0. Exit"
+			 << endl;
+		cin >> selection;
+
+		if(selection == 1){
+			myStore.createFlavor();
+		}else if(selection == 2){
+			myStore.createContainer();
+		}else if(selection == 3){
+			myStore.createTopping();
+		}else if(selection == 0){
+			break;
+		}else if(selection == 4){
+			myStore.printAll();
+		}else{
+			myStore.easter_egg();
+		}
 	}
-	
-	myStore.printContainers();
 	
 	/*Flavor vanilla("Vanilla", "Creamy vanilla flavored Ice cream", .50, 1.50, 10);
 	Flavor chocolate("Chocolate", "Creamy chocolatey flavor", .75, 2.00, 12);
