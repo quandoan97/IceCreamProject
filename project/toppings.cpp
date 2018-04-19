@@ -1,7 +1,6 @@
 #include "toppings.h"
 
 ostream& operator<<(ostream& out, const Toppings& t){
-	
 	out << "Name: " << t.name 
 		<< "\nDescription: " << t.description 
 		<< "\nWholesale Price: " << t.wholesale 
@@ -48,4 +47,12 @@ int Toppings::returnStock(){
 
 string Toppings::returnTopping(){
 	return topping_select;
+}
+
+void Toppings::restock(){
+	stock = 25;
+}
+
+void Toppings::consume(){
+	--stock;
 }

@@ -11,6 +11,8 @@ class Flavor{
 		double retail;
 		int stock;
 	public:
+		Flavor(){}
+		
 		Flavor(string name, string description, double wholesale, double retail, int stock){
 			this->name = name;
 			this->description = description;
@@ -26,6 +28,9 @@ class Flavor{
 		double returnRetail();
 		int returnStock();
 	
+		//This will mess with the stock
+		void restock();
+		void consume();
 		friend ostream& operator<<(ostream& out, const Flavor& f);
 };
 #endif

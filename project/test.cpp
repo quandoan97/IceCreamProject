@@ -1,61 +1,36 @@
-#include "flavor.h"
-#include "container.h"
-#include "toppings.h"
-#include "store.h"
+#include "inventory.h"
+#include "mainwin.h"
+#include <iostream>
+#include <gtkmm.h>
+#include "serving.h"
 using namespace std;
 
-int main(){
-	Store myStore;
+int main(int argc, char* argv[]){
 	
-	int selection;
+	Gtk::Main kit(argc, argv);
+	
+	Inventory store;
+	Flavor vanilla("Vanilla", "Creamy vanilla flavored Ice cream", .50, 1.50, 25);
+	Container sugar_cone("Sugar Cone", "Standard sugar coated ice cream cone", .50, 1.00, 25, 2);
+	Toppings candy("Candy", "Sweet Caramel Topping", .25, .50, 20);
+	Serving s(vanilla, candy, sugar_cone);
+	
+	cout<< s.price(vanilla.returnRetail(), sugar_cone.returnRetail(), candy.returnRetail()) <<endl;
+	
+	/*store.createFlavor();
 
-	while(true){
-		cout << "Welcome to the Ice Cream Shop\n"
-			 << "What would you like to do:\n" 
-			 << "1. Add Flavor\n"
-			 << "2. Add Container\n"
-			 << "3. Add Topping\n"
-			 << "4. Print all Flavors, Containers, & Toppings"
-			 << "0. Exit"
-			 << endl;
-		cin >> selection;
+    dialog->close();
+    while (Gtk::Main::events_pending())  Gtk::Main::iteration();
 
-		if(selection == 1){
-			myStore.createFlavor();
-		}else if(selection == 2){
-			myStore.createContainer();
-		}else if(selection == 3){
-			myStore.createTopping();
-		}else if(selection == 0){
-			break;
-		}else if(selection == 4){
-			myStore.printAll();
-		}else{
-			myStore.easter_egg();
-		}
-	}
+    delete dialog;
+	Glib::RefPtr<Gtk::Application> app = Gtk::Application::create(argc, argv, "edu.uta.cse1325.mice"); 
 	
-	/*Flavor vanilla("Vanilla", "Creamy vanilla flavored Ice cream", .50, 1.50, 10);
-	Flavor chocolate("Chocolate", "Creamy chocolatey flavor", .75, 2.00, 12);
-	Flavor cookies("Cookies and Cream", "An oreo based cookie and cream Ice cream", 1.00, 3.00, 15);
+	Mainwin win;
 	
-	Container sugar_cone("Sugar Cone", "Standard sugar coated ice cream cone", .50, 1.00, 15, 2);
+	win.set_title("Hello World");
 	
-	Toppings candy("Candy", "Sweet Caramel Topping", .25, .50, 20, 1);
-	
-	myStore.pushbackFlavors(vanilla);
-	myStore.pushbackFlavors(chocolate);
-	myStore.pushbackFlavors(cookies);
-	myStore.pushbackToppings(candy);
-	myStore.pushbackContainers(sugar_cone);
-	
-	cout<<myStore.returnContainer(0)<<endl;
-	
-	
-	
-	
-	
-	cout <<"\n"<<candy.returnTopping()<<" We own" <<endl;
+	return app->run(win);
 	*/
+	
 	return 0;
 }

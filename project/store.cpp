@@ -65,7 +65,7 @@ void Store::createTopping(){
 	double wholesale;
 	double retail;
 	int stock;
-	//int topping_select;
+	int topping_select;
 	
 	cout << "What is the name of the Topping" << endl;
 	cin >> name;
@@ -82,13 +82,13 @@ void Store::createTopping(){
 	cout << "How much much " << name << " is being delivered?" <<endl;
 	cin >> stock;
 	
-	/*
+	
 	cout << "How will this be added?\n"
 		 << "1. light\n2. Normal\n3. Extra\n4. Drenched"
 		 << endl;
 	cin >> topping_select;
-	*/
-	Toppings t(name, description, wholesale, retail, stock/*, topping_select*/);
+
+	Toppings t(name, description, wholesale, retail, stock, topping_select);
 	
 	totalToppings.push_back(t);
 }
@@ -178,11 +178,11 @@ void Store::easter_egg(){
 	pushbackContainers(waffle);
 	
 	//Toppings to add to the store
-	Toppings candy("Candy", "Sweet Caramel Topping", .25, .50, 20);
+	Toppings candy("Candy", "Sweet Caramel Topping", .25, .50, 20, 1);
 	pushbackToppings(candy);
-	Toppings chocolate_chips("Chocolate Chips", "Small hershey kisses", .25, .50, 20);
+	Toppings chocolate_chips("Chocolate Chips", "Small hershey kisses", .25, .50, 20, 2);
 	pushbackToppings(chocolate_chips);
-	Toppings bears("Gummy Bears", "Sweet and chewy gummy bears", .35, .75, 20);
+	Toppings bears("Gummy Bears", "Sweet and chewy gummy bears", .35, .75, 20, 3);
 	pushbackToppings(bears);
 }
 

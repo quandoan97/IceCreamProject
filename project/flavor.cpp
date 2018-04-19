@@ -30,3 +30,11 @@ double Flavor::returnRetail(){
 int Flavor::returnStock(){
 	return stock;
 }
+
+void Flavor::restock(){
+	stock = stock + 25;
+}
+
+void Flavor::consume(){
+	--stock;
+}

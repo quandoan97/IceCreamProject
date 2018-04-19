@@ -13,6 +13,8 @@ class Container{
 		int stock;
 		int scoops; // number of scoops
 	public:
+		Container(){}
+		
 		Container(string name, string description, double wholesale, double retail, int stock, int scoops){
 			this->name = name;
 			this->description = description;
@@ -30,6 +32,9 @@ class Container{
 		int returnStock();
 		int returnScoops();
 	
+		//This will mess with the stock
+		void restock();
+		void consume();
 		friend ostream& operator<<(ostream& out, const Container& c);
 };
 #endif

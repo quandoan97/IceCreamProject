@@ -35,3 +35,11 @@ int Container::returnStock(){
 int Container::returnScoops(){
 	return scoops;
 }
+
+void Container::restock(){
+	stock = 25;
+}
+
+void Container::consume(){
+	--stock;
+}
