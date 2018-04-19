@@ -7,7 +7,7 @@ class Order{
 		vector<Serving> totalServing;
 		Inventory inventory;
 	public:
-		void createServing();
+		void createServing(const Inventory& inventory);
 		void showServing();
 };
 

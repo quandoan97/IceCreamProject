@@ -1,4 +1,5 @@
 #include "inventory.h"
+#include "order.h"
 #include "mainwin.h"
 #include <iostream>
 #include <gtkmm.h>
@@ -13,7 +14,9 @@ int main(int argc, char* argv[]){
 	
 	inventory.easter_egg();
 	
+	Order o;
 	
+	o.createServing(inventory);
 	
 	
 	/*store.createFlavor();

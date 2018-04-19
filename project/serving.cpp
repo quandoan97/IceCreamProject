@@ -25,7 +25,7 @@ Container Serving::chooseContainer(const Inventory& inventory){
 
 string Serving::chooseTopStyle(){
 	string choice = Dialogs::input("1.Light\n2.Normal\n3.Extra\n4.Drenched", "MICE"); 
-	int _choice = stoi(choice)-1;
+	int selection = stoi(choice);
 	if(selection == 1){
 		return "light";
 	}else if(selection == 2){
