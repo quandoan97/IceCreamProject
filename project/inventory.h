@@ -19,9 +19,17 @@ class Inventory{
 		void createTopping();
 		void createContainer();
 		//These will show all the flavors, toppings, and containers
-		void showFlavors();
-		void showToppings();
-		void showContainers();
+		string showFlavors()const;
+		string showToppings()const;
+		string showContainers()const;
+	
+		//These will get the flavors
+		Flavor getFlavor(int index)const;
+		Toppings getTopping(int index)const;
+		Container getContainer(int index)const;
+	
+		//Easter Egg to add a bunch of flavors, containers, and Toppings
+		void easter_egg();
 };
 
 

@@ -25,10 +25,10 @@ class Toppings{
 		string select_to_string(int selection);
 	
 		//These will return the values eneterd in by the user
-		string returnName();
-		string returnDescription();
+		string returnName()const;
+		string returnDescription()const;
 		double returnWholesale();
-		double returnRetail();
+		double returnRetail()const;
 		int returnStock();
 		string returnTopping();
 	

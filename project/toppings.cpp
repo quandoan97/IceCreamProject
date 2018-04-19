@@ -25,11 +25,11 @@ string Toppings::select_to_string(int selection){
 }
 
 //These will return the values entered by the user
-string Toppings::returnName(){
+string Toppings::returnName()const{
 	return name;
 }
 
-string Toppings::returnDescription(){
+string Toppings::returnDescription()const{
 	return description;
 }
 
@@ -37,7 +37,7 @@ double Toppings::returnWholesale(){
 	return wholesale;	
 }
 
-double Toppings::returnRetail(){
+double Toppings::returnRetail()const{
 	return retail;
 }
 

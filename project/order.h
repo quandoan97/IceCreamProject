@@ -1,14 +1,14 @@
 #ifndef ORDER_H
 #define ORDER_H
 #include "serving.h"
+#include "inventory.h"
 class Order{
 	private:
 		vector<Serving> totalServing;
+		Inventory inventory;
 	public:
-		
-		
-		void createOrder();
-		void showOrder();
+		void createServing();
+		void showServing();
 };
 
 #endif

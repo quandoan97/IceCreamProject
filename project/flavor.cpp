@@ -11,11 +11,11 @@ ostream& operator<<(ostream& out, const Flavor& f){
 }
 
 //These will return the values entered by the user
-string Flavor::returnName(){
+string Flavor::returnName()const{
 	return name;
 }
 
-string Flavor::returnDescription(){
+string Flavor::returnDescription()const{
 	return description;
 }
 
@@ -23,7 +23,7 @@ double Flavor::returnWholesale(){
 	return wholesale;	
 }
 
-double Flavor::returnRetail(){
+double Flavor::returnRetail()const{
 	return retail;
 }
 

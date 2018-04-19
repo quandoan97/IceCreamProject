@@ -12,11 +12,11 @@ ostream& operator<<(ostream& out, const Container& c){
 }
 
 //These will return the values entered by the user
-string Container::returnName(){
+string Container::returnName()const{
 	return name;
 }
 
-string Container::returnDescription(){
+string Container::returnDescription()const{
 	return description;
 }
 
@@ -24,7 +24,7 @@ double Container::returnWholesale(){
 	return wholesale;	
 }
 
-double Container::returnRetail(){
+double Container::returnRetail()const{
 	return retail;
 }
 
