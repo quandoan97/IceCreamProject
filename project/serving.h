@@ -14,14 +14,16 @@ class Serving{
 		Container container;
 		int _price;
 		string topping_style;
+		string customer_name;
 	public:
 		Serving (){}
-		Serving(const Flavor& flavor, const Toppings& topping, const Container& container){
+		Serving(const Flavor& flavor, const Toppings& topping, const Container& container, string customer_name){
 			this->flavor = flavor;
 			this->topping = topping;
 			this->container = container;
 			this->_price = price(flavor.returnRetail(), topping.returnRetail(), container.returnRetail());
 			this->topping_style = chooseTopStyle();
+			this->customer_name = customer_name;
 		}
 		//Get the price
 		double price(double flavorPrice, double toppingPrice, double containerPrice);

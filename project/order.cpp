@@ -6,7 +6,12 @@ void Order::createServing(const Inventory& inventory){
 	Flavor f(s.chooseFlavor(inventory));
 	Toppings t(s.chooseTopping(inventory));
 	Container c(s.chooseContainer(inventory));
+	string name = Dialogs::input("Name of Customer", "MICE");
 	
-	Serving serve(f, t, c);
+	Serving serve(f, t, c, name);
 	totalServing.push_back(serve);
+}
+
+void Order::showServing(){
+	
 }
