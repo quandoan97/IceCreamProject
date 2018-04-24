@@ -1,5 +1,5 @@
 #include "flavor.h"
-
+//OPERATOR OVERLOAD
 ostream& operator<<(ostream& out, const Flavor& f){
 	out << "Name: " << f.name 
 		<< "\nDescription: " << f.description 

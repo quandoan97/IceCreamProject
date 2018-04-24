@@ -1,6 +1,6 @@
 #include "serving.h"
 #include "inventory.h"
-double Serving::price(double flavorPrice, double toppingPrice, double containerPrice){
+double Serving::price(double flavorPrice, double toppingPrice, double containerPrice)const{
 	double total = flavorPrice + toppingPrice + containerPrice;
 	return total;
 }
@@ -24,7 +24,7 @@ Container Serving::chooseContainer(const Inventory& inventory){
 }
 
 string Serving::chooseTopStyle(){
-	string choice = Dialogs::input("1.Light\n2.Normal\n3.Extra\n4.Drenched", "MICE"); 
+	string choice = Dialogs::input("How do you want your toppings served\n1.Light\n2.Normal\n3.Extra\n4.Drenched", "MICE"); 
 	int selection = stoi(choice);
 	if(selection == 1){
 		return "light";
@@ -37,4 +37,32 @@ string Serving::chooseTopStyle(){
 	}else{
 		return "Not a valid choice";
 	}
+}
+
+Flavor Serving::getFlavor()const{
+	return flavor;
+}
+
+Toppings Serving::getToppings()const{
+	return topping;
+}
+
+Container Serving::getContainer()const{
+	return container;
+}
+
+int Serving::getPrice()const{
+	return _price;
+}
+
+string Serving::getToppingStyle()const{
+	return topping_style;
+}
+
+string Serving::getCustomerName()const{
+	return customer_name;
+}
+
+string Serving::getQuantity()const{
+	return quantity;
 }

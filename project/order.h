@@ -9,6 +9,7 @@ class Order{
 	public:
 		void createServing(const Inventory& inventory);
 		void showServing();
+		string getOrder(const Serving& s);
 };
 
 #endif
